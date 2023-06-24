@@ -1,5 +1,3 @@
 ## HIGHTCHARTS
 
-# TODO:
-
-en el futuro será una función para poder seleccionar el tipo de gráfica y su visualización
+Char to show kWh data from fetch in hightchart chart
