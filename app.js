@@ -20,10 +20,11 @@ $(document).ready(() => {
     Highcharts.chart(container, {
       chart: {
         type: "spline",
-        // backgroundColor: "#1b1b1b",
         backgroundColor: "white",
         marginBottom: 40,
+        zoomType: "xy",
       },
+
       title: {
         text: "Highcharts chart",
         align: "left",
@@ -40,6 +41,9 @@ $(document).ready(() => {
       },
 
       yAxis: {
+        scrollbar: {
+          enabled: true,
+        },
         reversed: true,
         gridLineWidth: 0,
         tickInterval: 1,
@@ -47,24 +51,20 @@ $(document).ready(() => {
         endOnTick: false,
         labels: {
           style: {
-            color: "black",
+            color: "#191919",
             fontWeight: "bold",
           },
         },
         title: {
           text: null,
           style: {
-            color: "black",
+            color: "#191919",
             fontWeight: "bold",
           },
         },
       },
 
       colors: [
-        "#FF0200",
-        "#7CB4EC",
-        "#008001",
-        "#faf0be",
         "#FFB6C1",
         "#2C908F",
         "#91EE7D",
@@ -79,37 +79,12 @@ $(document).ready(() => {
         type: "linear",
         opposite: true,
         offset: 40,
-        categories: [
-          "00:00h",
-          "01:00h",
-          "02:00h",
-          "03:00h",
-          "04:00h",
-          "05:00h",
-          "06:00h",
-          "07:00h",
-          "08:00h",
-          "09:00h",
-          "10:00h",
-          "11:00h",
-          "12:00h",
-          "13:00h",
-          "14:00h",
-          "15:00h",
-          "16:00h",
-          "17:00h",
-          "18:00h",
-          "19:00h",
-          "20:00h",
-          "21:00h",
-          "22:00h",
-          "23:00h",
-        ],
+        categories: categories,
         showFirstLabel: true,
         showLastLabel: true,
         labels: {
           style: {
-            color: "black",
+            color: "#191919",
             fontWeight: "bold",
           },
         },
@@ -128,8 +103,14 @@ $(document).ready(() => {
         },
       },
 
+      tooltip: {
+        pointFormat:
+          '<span style="color:{series.color}">{series.name}</span>: <b>{point.y} kWh</b><br/>',
+      },
+
       plotOptions: {
         series: {
+          showInNavigator: true,
           label: {
             connectorAllowed: false,
           },
@@ -137,22 +118,58 @@ $(document).ready(() => {
             enabled: true,
             symbol: "circle",
           },
-          //   pointStart: 0, // para mostrar desde cuando se muestran los datos
-          lineWidth: 4, // el grosor de la línea
+          lineWidth: 4,
         },
       },
 
-      legenf: {
+      legend: {
         align: "right",
         verticalAlign: "middle",
         layout: "proximate",
         itemStyle: {
-          color: "#FFFFFF",
+          color: "#191919",
           fontWeight: "bold",
         },
       },
-
       series: arrayData,
+      caption: {
+        verticalAlign: "top",
+        useHTML: true,
+        style: {
+          padding: "10px 0",
+        },
+        text: text,
+      },
     });
   });
 });
+
+const categories = [
+  "00:00h",
+  "01:00h",
+  "02:00h",
+  "03:00h",
+  "04:00h",
+  "05:00h",
+  "06:00h",
+  "07:00h",
+  "08:00h",
+  "09:00h",
+  "10:00h",
+  "11:00h",
+  "12:00h",
+  "13:00h",
+  "14:00h",
+  "15:00h",
+  "16:00h",
+  "17:00h",
+  "18:00h",
+  "19:00h",
+  "20:00h",
+  "21:00h",
+  "22:00h",
+  "23:00h",
+];
+
+const text =
+  "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>";

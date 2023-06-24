@@ -25,6 +25,12 @@ body {
   width: 1200px;
 }
 
+#container {
+  height: 550px;
+  min-width: 300px;
+  margin: 0 auto;
+}
+
 .highcharts-data-table table {
   font-family: "Exo 2", sans-serif;
   border-collapse: collapse;
@@ -36,6 +42,7 @@ body {
 }
 
 .highcharts-data-table caption {
+  margin-top: 40px;
   padding: 1em 0;
   font-size: 1.2em;
   color: #555;
