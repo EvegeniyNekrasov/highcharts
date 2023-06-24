@@ -1,18 +1,38 @@
 [
   {
-    "name": "18/05/2023",
-    "data": [130, 125, 121, 126, 128, 121, 120, 130, 120, 135, 120, 140, 142, 128, 118, 120, 110, 114, 129, 120, 150, 120, 120, 120]
-  },
-  {
-    "name": "19/05/2023",
-    "data": [120, 135, 121, 116, 102, 100, 127, 138, 152, 135, 120, 140, 120, 120, 116, 120, 110, 114, 117, 141, 150, 113, 114, 130]
-  },
-  {
-    "name": "20/05/2023",
-    "data": [105, 111, 131, 100, 122, 121, 120, 130, 120, 135, 120, 140, 128, 152, 162, 120, 110, 114, 135, 124, 150, 117, 118, 119]
-  },
-  {
-    "name": "21/05/2023",
-    "data": [103, 105, 121, 116, 128, 121, 120, 140, 110, 135, 123, 134, 154, 120, 120, 160, 110, 114, 107, 122, 150, 125, 121, 122]
+    "facility": {
+      "title": "Data from facility 15",
+      "caption": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>",
+      "objects": [
+        {
+          "name": "18/05/2023",
+          "data": [
+            130, 125, 121, 126, 128, 121, 120, 130, 120, 135, 120, 140, 142,
+            128, 118, 120, 110, 114, 129, 120, 150, 120, 120, 120
+          ]
+        },
+        {
+          "name": "19/05/2023",
+          "data": [
+            120, 135, 121, 116, 102, 100, 127, 138, 152, 135, 120, 140, 120,
+            120, 116, 120, 110, 114, 117, 141, 150, 113, 114, 130
+          ]
+        },
+        {
+          "name": "20/05/2023",
+          "data": [
+            105, 111, 131, 100, 122, 121, 120, 130, 120, 135, 120, 140, 128,
+            152, 162, 120, 110, 114, 135, 124, 150, 117, 118, 119
+          ]
+        },
+        {
+          "name": "21/05/2023",
+          "data": [
+            103, 105, 121, 116, 128, 121, 120, 140, 110, 135, 123, 134, 154,
+            120, 120, 160, 110, 114, 107, 122, 150, 125, 121, 122
+          ]
+        }
+      ]
+    }
   }
 ]

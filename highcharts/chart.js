@@ -5,6 +5,8 @@ import { caption } from "./options/caption.js";
 
 export function drawGraf() {
   let arrayData = [];
+  let chartTitle;
+  let chartCaption;
   const getData = async () => {
     const url = "./seed.json"; // for now it's json file, but in the future will be an endpoint call
     const response = await fetch(url);
@@ -15,11 +17,11 @@ export function drawGraf() {
   };
 
   getData().then((data) => {
-    data.forEach((element) => {
+    chartTitle = data[0].facility.title;
+    chartCaption = data[0].facility.caption;
+    data[0].facility.objects.forEach((element) => {
       arrayData.push(element);
     });
-
-    console.log(data);
 
     const container = document.getElementById("container");
     Highcharts.chart(container, {
@@ -31,18 +33,13 @@ export function drawGraf() {
       },
 
       title: {
-        text: "Highcharts chart",
+        text: chartTitle,
         align: "left",
         color: "black",
       },
 
       credits: {
         enabled: false,
-      },
-
-      subtitle: {
-        text: "dummy text",
-        align: "left",
       },
 
       yAxis: yAxis(),
@@ -78,7 +75,7 @@ export function drawGraf() {
       },
 
       series: arrayData,
-      caption: caption(),
+      caption: caption(chartCaption),
     });
   });
 }
