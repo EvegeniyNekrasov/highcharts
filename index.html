@@ -12,19 +12,24 @@
       integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
       crossorigin="anonymous"
     ></script>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js" defer></script>
+    <script
+      src="https://code.highcharts.com/modules/exporting.js"
+      defer
+    ></script>
+    <script
+      src="https://code.highcharts.com/modules/export-data.js"
+      defer
+    ></script>
+    <script
+      src="https://code.highcharts.com/modules/accessibility.js"
+      defer
+    ></script>
   </head>
 
   <body>
-    <div id="container">
-      <div class="oprions-wrapper">
-        <button type="button" data-num="0">Dataset 1</button>
-        <button type="button" data-num="1">Dataset 2</button>
-      </div>
-
-      <div class="highcharts-figure">
+    <div class="main-chart">
+      <div class="chart">
         <div id="container"></div>
       </div>
     </div>
