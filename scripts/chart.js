@@ -8,8 +8,18 @@ import { caption } from "./options/caption.js";
 import { randomDate } from "./utilities/randomDate.js";
 import { randomList } from "./utilities/randomList.js";
 
-export function drawGraf() {
-  let arrayData = [];
+const colors = [
+  "#FFB6C1",
+  "#2C908F",
+  "#91EE7D",
+  "#F7A35B",
+  "#8185E8",
+  "#F15C80",
+  "#ffffff",
+  "#A19642",
+];
+
+const drawGraf = () => {
   let chartTitle = "Random facility data";
   let chartCaption =
     "I'm baby readymade tofu gorpcore roof party cardigan banjo. Intelligentsia DSA echo park keytar, venmo copper mug la croix cardigan banh mi.";
@@ -87,24 +97,10 @@ export function drawGraf() {
     series: arr,
     caption: caption(chartCaption),
   });
+};
 
-  getData().then((data) => {
-    data[0].facility.objects.forEach((element) => {
-      console.log(element.id);
-      if (element.id == 1) {
-        arrayData.push(element);
-      }
-    });
-  });
-}
+drawGraf();
 
-const colors = [
-  "#FFB6C1",
-  "#2C908F",
-  "#91EE7D",
-  "#F7A35B",
-  "#8185E8",
-  "#F15C80",
-  "#ffffff",
-  "#A19642",
-];
+document.getElementById("randomBtn").addEventListener("click", () => {
+  drawGraf();
+});
