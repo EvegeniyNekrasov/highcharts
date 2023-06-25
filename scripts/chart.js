@@ -14,8 +14,10 @@ const loadFakeData = () => {
 };
 loadFakeData();
 
+let chatType = "spline";
+
 const drawChart = () => {
-  Highcharts.chart(loadSettings(arr, "spline"));
+  Highcharts.chart(loadSettings(arr, chatType));
 };
 
 drawChart();
@@ -23,5 +25,35 @@ drawChart();
 document.getElementById("randomBtn").addEventListener("click", () => {
   arr = [];
   loadFakeData();
+  drawChart();
+});
+
+document.getElementById("line_btn").addEventListener("click", () => {
+  chatType = "line";
+  drawChart();
+});
+
+document.getElementById("spline_btn").addEventListener("click", () => {
+  chatType = "spline";
+  drawChart();
+});
+
+document.getElementById("area_btn").addEventListener("click", () => {
+  chatType = "area";
+  drawChart();
+});
+
+document.getElementById("areaspline_btn").addEventListener("click", () => {
+  chatType = "areaspline";
+  drawChart();
+});
+
+document.getElementById("column_btn").addEventListener("click", () => {
+  chatType = "column";
+  drawChart();
+});
+
+document.getElementById("bar_btn").addEventListener("click", () => {
+  chatType = "bar";
   drawChart();
 });
