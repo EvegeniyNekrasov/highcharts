@@ -4,14 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hightchart chart</title>
-    <script src="./app.js"></script>
+    <!-- <script src="./app.js" type="module"></script> -->
+    <script src="./index.bundle.js" type="module"></script>
   </head>
 
   <body>
     <div class="main-chart">
       <div class="chart">
         <div class="buttons">
-          <button type="button" id="randomBtn">Random Data</button>
+          <button type="button" class="random-button" id="randomBtn">
+            Random Data
+          </button>
+          <button type="button" class="change-chart-button" id="line_btn">
+            Line
+          </button>
+          <button type="button" class="change-chart-button" id="spline_btn">
+            Spline
+          </button>
+          <button type="button" class="change-chart-button" id="area_btn">
+            Area
+          </button>
+          <button type="button" class="change-chart-button" id="areaspline_btn">
+            Areaspline
+          </button>
+          <button type="button" class="change-chart-button" id="column_btn">
+            Column
+          </button>
+          <button type="button" class="change-chart-button" id="bar_btn">
+            Bar
+          </button>
+          <button type="button" class="change-chart-button" id="pie_btn">
+            Pie
+          </button>
         </div>
         <div id="container"></div>
       </div>

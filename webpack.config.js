@@ -15,6 +15,10 @@ module.exports = {
       template: path.resolve(__dirname, "./src/index.html"),
     }),
   ],
+  optimization: {
+    minimize: false,
+  },
+  devtool: "inline-source-map",
   mode: "development",
   module: {
     rules: [

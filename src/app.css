@@ -67,3 +67,20 @@ body {
 .highcharts-data-table tr:hover {
   background: #f1f7ff;
 }
+
+/* BUTTON */
+.random-button {
+  border: 1px solid #202020;
+  outline: none;
+  padding: 0px 16px;
+  border-radius: 5px;
+  height: 28px;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #202020;
+}
+
+.random-button:hover {
+  background-color: #202020;
+  color: #ffffff;
+}
