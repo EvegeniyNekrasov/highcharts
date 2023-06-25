@@ -15,9 +15,9 @@ const loadFakeData = () => {
 loadFakeData();
 
 let chatType = "spline";
-
+let chart;
 const drawChart = () => {
-  Highcharts.chart(loadSettings(arr, chatType));
+  chart = Highcharts.chart(loadSettings(arr, chatType));
 };
 
 drawChart();
@@ -56,4 +56,12 @@ document.getElementById("column_btn").addEventListener("click", () => {
 document.getElementById("bar_btn").addEventListener("click", () => {
   chatType = "bar";
   drawChart();
+});
+
+document.getElementById("small").addEventListener("click", () => {
+  chart.setSize(800, 500);
+});
+
+document.getElementById("large").addEventListener("click", () => {
+  chart.setSize(1600, 550);
 });

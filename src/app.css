@@ -22,12 +22,16 @@ body {
   padding: 30px;
   background-color: white;
   border-radius: 10px;
-  width: 1200px;
+  /* width: 1600px; */
+  width: auto;
+  height: auto;
 }
 
 #container {
   height: 550px;
   min-width: 300px;
+  width: 1600px;
+  max-width: 1600px;
   margin: 0 auto;
 }
 
@@ -70,7 +74,8 @@ body {
 
 /* BUTTON */
 .random-button,
-.change-chart-button {
+.change-chart-button,
+.dimention-button {
   outline: none;
   padding: 0px 16px;
   border-radius: 3px;
@@ -97,5 +102,16 @@ body {
 
 .change-chart-button:hover {
   background-color: #65a1e8;
+  color: #ffffff;
+}
+
+.dimention-button {
+  background-color: #dcfcd0;
+  border: 1px solid #63a56e;
+  color: #202020;
+}
+
+.dimention-button:hover {
+  background-color: #63a56e;
   color: #ffffff;
 }
