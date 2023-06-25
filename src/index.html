@@ -12,9 +12,18 @@
     <div class="main-chart">
       <div id="chart-container" class="chart">
         <div class="buttons">
-          <button type="button" class="random-button" id="randomBtn">
-            Random Data
+          <label for="startDate">Start date:</label>
+          <input type="date" id="startDate" min="2023-01-01" max="2023-12-31" />
+          <label for="endDate">End date:</label>
+          <input type="date" id="endDate" min="2023-01-01" max="2023-12-31" />
+          <button
+            class="generate-date-button"
+            type="button"
+            id="generateSelectedData"
+          >
+            Generate data
           </button>
+
           <button type="button" class="change-chart-button" id="line_btn">
             Line
           </button>
@@ -35,9 +44,7 @@
           </button>
         </div>
 
-        <div id="container">
-          <div class="img" id="img-container"></div>
-        </div>
+        <div id="container"></div>
       </div>
     </div>
   </body>
