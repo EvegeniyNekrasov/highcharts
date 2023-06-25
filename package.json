@@ -1,10 +1,11 @@
 {
   "name": "highcharts",
   "version": "1.0.0",
-  "description": "Char to show kWh data from fetch in hightchart chart",
+  "description": "Some text...",
   "main": "app.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "dev": "webpack-dev-server --open"
   },
   "keywords": [],
   "author": "",
@@ -12,12 +13,14 @@
   "dependencies": {
     "css-loader": "^6.8.1",
     "highcharts": "^11.1.0",
-    "moment": "^2.29.4",
+    "moment": "^2.29.4"
+    
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.3",
+    "webpack-dev-server": "^4.15.1",
     "style-loader": "^3.3.3",
     "webpack": "^5.88.0",
     "webpack-cli": "^5.1.4"
-  },
-  "devDependencies": {
-    "html-webpack-plugin": "^5.5.3"
   }
 }

@@ -19,6 +19,10 @@ export const loadSettings = (arr, type) => {
       backgroundColor: "white",
       marginBottom: 40,
       zoomType: "xy",
+      scrollablePlotArea: {
+        minWidth: 3000,
+        scrollPositionX: 1,
+      },
     },
 
     accessibility: {

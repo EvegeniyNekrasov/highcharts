@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hightchart chart</title>
     <!-- <script src="./app.js" type="module"></script> -->
-    <script src="./index.bundle.js" type="module"></script>
+    <!-- <script src="./index.bundle.js" type="module"></script> -->
   </head>
 
   <body>
     <div class="main-chart">
-      <div class="chart">
+      <div id="chart-container" class="chart">
         <div class="buttons">
           <button type="button" class="random-button" id="randomBtn">
             Random Data
@@ -33,14 +33,11 @@
           <button type="button" class="change-chart-button" id="bar_btn">
             Bar
           </button>
-          <button type="button" class="dimention-button" id="small">
-            Small
-          </button>
-          <button type="button" class="dimention-button" id="large">
-            Large
-          </button>
         </div>
-        <div id="container"></div>
+
+        <div id="container">
+          <div class="img" id="img-container"></div>
+        </div>
       </div>
     </div>
   </body>
